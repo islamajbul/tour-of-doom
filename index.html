@@ -8,7 +8,7 @@
     <title>Tour of DOM</title>
     <link rel="stylesheet" href="styles/styles.css">
     <style>
-        li {
+        .fruits-container li {
             color: tomato;
         }
 
@@ -39,8 +39,8 @@
                 <li>Dom de re baba</li>
             </ul>
         </section>
-        <section>
-            <h1 id="fruits-title">Fruits I like</h1>
+        <section class="fruits-container">
+            <h1 id="fruits-title" class="some-class random-class blue-background">Fruits I like</h1>
             <ul>
                 <li>Apple</li>
                 <li>Banana</li>
@@ -59,6 +59,10 @@
     </main>
     <script src="js/dom.js"></script>
     <script>
+   
+/* ----------------getElementsByTagName---------------- */
+        // Option 01
+
         const liCollection = document.getElementsByTagName('li');
             // console.log(liCollection);
         for (const li of liCollection) {
@@ -70,13 +74,29 @@
             // console.log(h1.innerText);
         }
 
+/* -------------getElementById------------------------- */
+        // Option 02
+
         const fruitsTitle = document.getElementById('fruits-title');
         fruitsTitle.innerText = 'Fruits changed bu js';
+
+/* ----------------getElementsByClassName---------------- */
+        // Option 03
 
         const Places = document.getElementsByClassName('important-places');
         // console.log(Places);
         for(const place of Places){
-            console.log(place.innerText);
+            // console.log(place.innerText);
+        }
+
+/* --------------querySelector------------------ */
+        // Option 04 querySelector
+        // Option 05 querySelectorAll
+         
+        const someLi = document.querySelectorAll('.fruits-container li');
+        console.log(someLi);
+        for(const li of someLi){
+            console.log(li.innerText);
         }
     </script>
 </body>
