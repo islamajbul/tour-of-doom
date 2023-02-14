@@ -47,7 +47,7 @@
                 <li>Carrot</li>
             </ul>
         </section>
-        <section>
+        <section id="places-container" class="large-text">
             <h1 id="places-title">Places I like to visit</h1>
             <ul>
                 <li class="important-places">Sundarban</li>
@@ -58,6 +58,7 @@
         </section>
     </main>
     <script src="js/dom.js"></script>
+    <script src="js/style.js"></script>
     <script>
    
 /* ----------------getElementsByTagName---------------- */
@@ -94,9 +95,9 @@
         // Option 05 querySelectorAll
          
         const someLi = document.querySelectorAll('.fruits-container li');
-        console.log(someLi);
+        // console.log(someLi);
         for(const li of someLi){
-            console.log(li.innerText);
+            // console.log(li.innerText);
         }
     </script>
 </body>
